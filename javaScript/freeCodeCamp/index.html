@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        function smallestCommons(arrValue) {            
+            console.log('makeArra', makeArray(arrValue));
+            checkCommonMultiple(makeArray(arrValue));
+        }
+
+        function makeArray(arr){
+            var tempArray = [];
+            for(var i = arr[0]; i<=arr[1]; i++){
+                tempArray.push(i);
+            }
+            return tempArray;
+        }
+
+        function checkCommonMultiple(multipleValue){
+            var getLength = multipleValue.length-1;
+            var checkStatus = false;
+            for(var i = 0; i<multipleValue.length; i++){
+                var commomSmallValue = multipleValue[getLength]*multipleValue[getLength-1]
+                if(multipleValue[i] % i === 0){
+                    
+                }
+            }
+        }
+
+        smallestCommons([1, 5]);
+    </script>
+</body>
+
+</html>

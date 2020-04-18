@@ -1,0 +1,109 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0px auto;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+        }
+        .gateway-options .payment-type em {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        /*----------- copy from here --------*/
+        .gateway-options .payment-type {
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #b1b1b1;
+            /* padding: 13px 0 13px 0px; */
+            position: relative;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 400;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.19;
+            letter-spacing: .2px;
+            text-align: left;
+            color: #000;
+        }
+
+        .radioParent{
+            padding: 13px 0 13px 0px;
+        }
+        .radioParent input[type="radio"] {
+            display: none;
+        }
+        .radioParent input[type="radio"] + label {
+            padding-left: 30px;
+            background: url(./images/radio_Inactive.svg) no-repeat;
+            background-size: 13px;
+            background-position: 9px 4px;
+        }
+        .radioParent input[type="radio"]:checked + label {
+            background: url(./images/radio_active.svg) no-repeat;
+            background-size: 13px;
+            background-position: 9px 4px;
+        }
+        /*----------- copy from here end --------*/
+    </style>
+</head>
+
+<body>
+    <div class="paymet-parent">
+        <h4 class="payment-via">Select Payment Method</h4>
+        <ul class="gateway-options">
+            <li class="payment-type">
+                <div class="radioParent">
+                    <input type="radio" checked name="payment-option" value="payu">
+                    <label>Debit and Netbanking</label>
+                </div>                                
+                <em class="payu"></em>
+            </li>
+            <li class="payment-type">
+                <div class="radioParent">
+                        <input type="radio" name="payment-option" value="payu1">
+                    <label>Credit Card</label>
+                </div>                
+                <emclass="payu1"></em>
+            </li>
+            <li class="payment-type">
+                <div class="radioParent">
+                        <input type="radio" name="payment-option" value="paytm">
+                    <label>Paytm</label>
+                </div>                
+                <emclass="paytm"></em>
+            </li>
+            <li class="payment-type">
+                <div class="radioParent">
+                    <input type="radio" name="payment-option" value="mobikwik">
+                    <label>Mobikwik</label>
+                </div>
+                
+                <emclass="mobikwik"></em>
+            </li>
+            <li class="payment-type">
+                <div class="radioParent">
+                        <input type="radio" name="payment-option" value="paypal">
+                    <label>Paypal (For International Users)</label>
+                </div>                
+                <em class="paypal"></em>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
