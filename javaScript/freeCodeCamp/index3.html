@@ -1,0 +1,54 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Hello Ishimdar</h3>
+
+    <script>
+
+        function checkIndexOf (newArg, number){
+            debugger;
+            var availble = 0;
+            for(var i = 0; i<newArg.length; i++){
+                if(newArg[i].indexOf(number) > 0){
+                    // console.log('number', number);
+                    availble = availble+1;
+                }
+            }
+            console.log('availble', availble)
+            return availble;
+        }
+
+
+        function sym(...args) {
+            let newArg = args;
+            var parentArray = [];
+            let tempArray = [];
+
+            for(var i = 0; i< newArg.length; i++){
+                parentArray = parentArray.concat(newArg[i]);
+            }
+
+            for(var i = 0; i< parentArray.length; i++){
+                console.log(checkIndexOf(newArg, parentArray[i]), parentArray[i])
+                if(checkIndexOf(newArg, parentArray[i]) === 1){
+                    tempArray.push(parentArray[i]);
+                }
+            }
+
+
+            console.log('tempArray',tempArray);
+            return tempArray;
+        }
+
+        sym([1, 2, 3], [5, 2, 1, 4]);
+
+    </script>
+</body>
+
+</html>
